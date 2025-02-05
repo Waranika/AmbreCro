@@ -6,11 +6,11 @@
     <title>AMBRE CRO</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            text-align: center;
-			background-color: #deaddb;
+        	font-family: Arial, sans-serif;
+        	margin: 0;
+        	padding: 0;
+        	text-align: center;
+		background-color: #deaddb;
 
         }
         header {
@@ -27,32 +27,37 @@
         main {
             padding: 50px;
         }
+	h2 {
+		font-family: Brush Script MT, cursive;
+		font-size: 30px;
+        }
+		
         .site-title {
 		padding: 5px 175px;
 		font-family: Brush Script MT, cursive;
-		font-size: 60px;
-		font-weight: bold;
+        	font-size: 60px;
+        	font-weight: bold;
         }
         .nav {
-            display: flex;
-            gap: 15px;
+        	display: flex;
+        	gap: 15px;
         }
         .nav a {
-            text-decoration: none;
-            color: #FFFFFF;
-            font-weight: bold;
-			font-size: 30px;
-			font-family: Brush Script MT, cursive;
+        	text-decoration: none;
+        	color: #FFFFFF;
+        	font-weight: bold;
+		font-size: 30px;
+		font-family: Brush Script MT, cursive;
         }
-		.nav a:visited {
-			color: #FFFFFF; /* Keeps the same color after clicking */
-		}
+	.nav a:visited {
+		color: #FFFFFF; /* Keeps the same color after clicking */
+	}
 
-		.nav a:active {
-			color: #FFFFFF; /* Prevents greying when clicking */
-		}
+	.nav a:active {
+		color: #FFFFFF; /* Prevents greying when clicking */
+	}
         .nav a:hover {
-            text-decoration: underline;
+        	text-decoration: underline;
         }
         .gallery {
             display: flex;
@@ -67,10 +72,10 @@
             object-fit: cover;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
-		.greatgallery img {
+	.greatgallery img {
             border-radius: 20px;
-            width: 600px;
-            height: auto;
+            width: auto;
+            height: 500px;
             object-fit: cover;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
@@ -80,6 +85,7 @@
             background-repeat: repeat-x;
             margin: 5px 0;
         }
+		
         footer {
             background-color: #333;
             color: white;
@@ -97,7 +103,7 @@
             border-radius: 10px;
             object-fit: cover;
         }
-		.custom-shape-divider-top-1738779862 {
+	.custom-shape-divider-top-1738779862 {
 			position: absolute;
 			top: 0;
 			left: 0;
@@ -105,19 +111,28 @@
 			overflow: hidden;
 			line-height: 0;
 			pointer-events: none;
-		}
+	}
 
-		.custom-shape-divider-top-1738779862 svg {
+	.custom-shape-divider-top-1738779862 svg {
 			position: relative;
 			display: block;
 			width: calc(196% + 1.3px);
 			height: 210px;
-		}
+	}
 
-		.custom-shape-divider-top-1738779862 .shape-fill {
+	.custom-shape-divider-top-1738779862 .shape-fill {
 			fill: #9B59A7;
 			opacity: 0.5;
-		}
+	}
+		
+	.fade-in-slide-up {
+			opacity: 0;
+			transform: translateY(30px); /* Start slightly lower */
+			transition: opacity 1.5s ease-out, transform 1s ease-out;
+	}
+		
+		
+
     </style>
 </head>
 <body>
@@ -136,6 +151,17 @@
 	</div>
 
     <main>
+	
+	
+	
+		<section>
+            <h2>A la une</h2>
+            <div class="greatgallery">
+                <img src="images\475145601_17966965925831358_7780118131363154110_n.jpeg" alt="Forest Owl">
+            </div>
+        </section>
+		
+		
         <section>
             <h2>Our Collection</h2>
             <div class="gallery">
@@ -145,15 +171,6 @@
             </div>
         </section>
 
-        <section>
-            <h2>Spotlight</h2>
-            <div class="greatgallery">
-                <img src="images\IMG_2976.jpeg" alt="Forest Owl">
-            </div>
-        </section>
-
-        <div class="divider"></div>
-
         <section id="instagram">
             <h2>Follow Us on Instagram</h2>
             <div class="instagram">
@@ -161,15 +178,12 @@
             </div>
         </section>
 
-        <div class="divider"></div>
+
 
         <section>
             <h2>About Us</h2>
             <p>
-               Le site de Ambre !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-			   Le site de Ambre !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-			   Le site de Ambre !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-			   Le site de Ambre !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
             </p>
         </section>
     </main>
@@ -177,5 +191,22 @@
     <footer>
         <p>Designed by Waranika</p>
     </footer>
+	
+	
+	<script>
+	document.addEventListener("DOMContentLoaded", function() {
+		// Select everything after .custom-shape-divider-top-1738779862
+		let contentToFadeIn = document.querySelectorAll("main, footer");
+
+		// Apply fade-in effect
+		contentToFadeIn.forEach(element => {
+			element.classList.add("fade-in-slide-up");
+			setTimeout(() => {
+				element.style.opacity = "1";
+				element.style.transform = "translateY(0)";
+			}, 100); // Small delay to ensure the animation starts after loading
+		});
+	});
+	</script>
 </body>
 </html>
