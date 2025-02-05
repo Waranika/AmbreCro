@@ -1,1 +1,1 @@
-# ambrecro.github.io
+# https://waranika.github.io/AmbreCro/
