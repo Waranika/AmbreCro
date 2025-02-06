@@ -6,11 +6,11 @@
     <title>AMBRE CRO</title>
     <style>
         body {
-        	font-family: Arial, sans-serif;
-        	margin: 0;
-        	padding: 0;
-        	text-align: center;
-		background-color: #deaddb;
+            font-family: Arial, sans-serif;
+            margin: auto;
+            padding: 0;
+            text-align: center;
+			background-color: #deaddb;
 
         }
         header {
@@ -27,37 +27,54 @@
         main {
             padding: 50px;
         }
-	h2 {
-		font-family: Brush Script MT, cursive;
-		font-size: 30px;
+		
+		@media (max-width: 768px) {
+			.site-title {
+				padding: 20px;
+			}
+		}
+		
+		
+		h2 {
+			font-family: Brush Script MT, cursive;
+			font-size: 30px;
         }
 		
         .site-title {
-		padding: 5px 175px;
-		font-family: Brush Script MT, cursive;
-        	font-size: 60px;
-        	font-weight: bold;
+			padding: 5px 175px;
+			font-family: Brush Script MT, cursive;
+            font-size: 60px;
+            font-weight: bold;
         }
+		
+		@media (max-width: 768px) {
+			.site-title {
+				font-size: 30px;
+				padding: 5px;
+			}
+		}
+		
         .nav {
-        	display: flex;
-        	gap: 15px;
+            display: flex;
+            gap: 15px;
+			align-items: center;
         }
         .nav a {
-        	text-decoration: none;
-        	color: #FFFFFF;
-        	font-weight: bold;
-		font-size: 30px;
-		font-family: Brush Script MT, cursive;
+            text-decoration: none;
+            color: #FFFFFF;
+            font-weight: bold;
+			font-size: 30px;
+			font-family: Brush Script MT, cursive;
         }
-	.nav a:visited {
-		color: #FFFFFF; /* Keeps the same color after clicking */
-	}
+		.nav a:visited {
+			color: #FFFFFF; /* Keeps the same color after clicking */
+		}
 
-	.nav a:active {
-		color: #FFFFFF; /* Prevents greying when clicking */
-	}
+		.nav a:active {
+			color: #FFFFFF; /* Prevents greying when clicking */
+		}
         .nav a:hover {
-        	text-decoration: underline;
+            text-decoration: underline;
         }
         .gallery {
             display: flex;
@@ -72,13 +89,32 @@
             object-fit: cover;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
-	.greatgallery img {
+		.gallery img, greatgallery {
+			width = 100%:
+			max-width = 300px;
+			height=auto;
+		}
+		.greatgallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+		
+		.greatgallery img {
             border-radius: 20px;
             width: auto;
             height: 500px;
             object-fit: cover;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+			justify-content: center;
         }
+		@media (max-width: 768px) {
+			.greatgallery img {
+				width: auto;
+				height: 350px;
+			}
+		}
+		
         .divider {
             background-image: url('data:image/svg+xml;charset=UTF-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 10" preserveAspectRatio="none"><path d="M0 5c30-10 60 10 90 0s30-10 30 0v5H0z" fill="%237C9473"/></svg>');
             height: 10px;
@@ -91,6 +127,13 @@
             color: white;
             padding: 10px;
         }
+		
+		@media (max-width: 768px) {
+			.footer {
+				text-align : center;
+				padding: 15px;
+			}
+		}
         .instagram {
             display: flex;
             justify-content: center;
@@ -103,7 +146,7 @@
             border-radius: 10px;
             object-fit: cover;
         }
-	.custom-shape-divider-top-1738779862 {
+		.custom-shape-divider-top-1738779862 {
 			position: absolute;
 			top: 0;
 			left: 0;
@@ -111,25 +154,32 @@
 			overflow: hidden;
 			line-height: 0;
 			pointer-events: none;
-	}
+		}
 
-	.custom-shape-divider-top-1738779862 svg {
+		.custom-shape-divider-top-1738779862 svg {
 			position: relative;
 			display: block;
 			width: calc(196% + 1.3px);
 			height: 210px;
-	}
+		}
+		
+		@media (max-width: 768px) {
+			.custom-shape-divider-top-1738779862 svg {
+				width: calc(140% + 1.3px);
+				height: 120px;
+			}
+		}
 
-	.custom-shape-divider-top-1738779862 .shape-fill {
+		.custom-shape-divider-top-1738779862 .shape-fill {
 			fill: #9B59A7;
 			opacity: 0.5;
-	}
+		}
 		
-	.fade-in-slide-up {
+		.fade-in-slide-up {
 			opacity: 0;
 			transform: translateY(30px); /* Start slightly lower */
 			transition: opacity 1.5s ease-out, transform 1s ease-out;
-	}
+		}
 		
 		
 
@@ -174,7 +224,7 @@
         <section id="instagram">
             <h2>Follow Us on Instagram</h2>
             <div class="instagram">
-                <a href="https://www.instagram.com/ambre_cro/"> <img src="images\1725819461instagram-logo.png" alt="Instagram Image 1"></a>
+                <a href="https://www.instagram.com/ambre_cro/"> <img src="C:\Users\kizer\Downloads\Ambre Website\1725819461instagram-logo.png" alt="Instagram Image 1"></a>
             </div>
         </section>
 
